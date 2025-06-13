@@ -10,8 +10,8 @@ from pyrogram.types import ChatMemberUpdated, Message
 
 from Bad.logging import LOGGERR
 from Bad import app
-from Bad.database.decorators import AdminRightsCheck
-from Bad.database.permissions import adminsOnly
+from Bad.database.decoratorsdb import AdminRightsCheck
+from Bad.database.permissionsdb import adminsOnly
 
 from Bad.database.antispam_db import GBan
 from Bad.database.greetings_db import Greetings
