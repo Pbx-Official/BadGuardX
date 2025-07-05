@@ -571,26 +571,24 @@ async def goodbye(c: app, m: Message):
     
 __MODULE__ = "ᴡᴇʟᴄᴏᴍᴇ"
 __HELP__ = """
-**ɢʀᴇᴇᴛɪɴɢꜱ**
+**<u>ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇs 🎉</u>**
 
-ᴄᴜꜱᴛᴏᴍɪᴢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ'ꜱ ᴡᴇʟᴄᴏᴍᴇ / ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇꜱ ᴛʜᴀᴛ ᴄᴀɴ ʙᴇ ᴘᴇʀꜱᴏɴᴀʟɪꜱᴇᴅ ɪɴ ᴍᴜʟᴛɪᴘʟᴇ ᴡᴀʏꜱ.
+» `/setwelcome <reply>` - ꜱᴇᴛ ᴀ ᴄᴜꜱᴛᴏᴍ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ.
+» `/setgoodbye <reply>` - ꜱᴇᴛ ᴀ ᴄᴜꜱᴛᴏᴍ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ.
+» `/resetwelcome` - ʀᴇꜱᴇᴛ ᴛᴏ ᴅᴇꜰᴀᴜʟᴛ ᴡᴇʟᴄᴏᴍᴇ ᴛᴇxᴛ.
+» `/resetgoodbye` - ʀᴇꜱᴇᴛ ᴛᴏ ᴅᴇꜰᴀᴜʟᴛ ɢᴏᴏᴅʙʏᴇ ᴛᴇxᴛ.
+» `/welcome <on/off> | noformat` - ᴇɴᴀʙʟᴇ / ᴅɪsᴀʙʟᴇ ᴏʀ ᴠɪᴇᴡ ᴡᴇʟᴄᴏᴍᴇ ꜱᴇᴛᴛɪɴɢꜱ.
+» `/goodbye <on/off> | noformat` - ᴇɴᴀʙʟᴇ / ᴅɪꜱᴀʙʟᴇ ɢᴏᴏᴅʙʏᴇꜱ.
+» `/cleanwelcome <on/off>` - ᴄʟᴇᴀɴ ᴘʀᴇᴠɪᴏᴜꜱ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇ.
+» `/cleangoodbye <on/off>` - ᴄʟᴇᴀɴ ᴘʀᴇᴠɪᴏᴜꜱ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ.
+» `/cleanservice <on/off>` - ʀᴇᴍᴏᴠᴇ ᴛᴇʟᴇɢʀᴀᴍ ᴊᴏɪɴ / ʟᴇғᴛ ꜱᴇʀᴠɪᴄᴇ ɴᴏᴛɪᴄᴇꜱ.
 
-**ɴᴏᴛᴇ:**
-× ᴄᴜʀʀᴇɴᴛʟʏ ɪᴛ ꜱᴜᴘᴘᴏʀᴛꜱ ᴏɴʟʏ ᴛᴇxᴛ!
-× ʙᴀᴅ ᴍᴜꜱᴛ ʙᴇ ᴀɴ ᴀᴅᴍɪɴ ᴛᴏ ɢʀᴇᴇᴛ ᴀɴᴅ ɢᴏᴏᴅʙʏᴇ ᴜꜱᴇʀꜱ.
+**<u>ғᴏʀᴍᴀᴛɪɴɢ ᴛɪᴘꜱ 🦇</u>**
 
-**ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ:**
-• /setwelcome <reply> : ꜱᴇᴛꜱ ᴀ ᴄᴜꜱᴛᴏᴍ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇ.
-• /setgoodbye <reply> : ꜱᴇᴛꜱ ᴀ ᴄᴜꜱᴛᴏᴍ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ.
-• /resetwelcome : ʀᴇꜱᴇᴛꜱ ᴛᴏ ʙᴏᴛ ᴅᴇꜰᴀᴜʟᴛ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇ.
-• /resetgoodbye : ʀᴇꜱᴇᴛꜱ ᴛᴏ ʙᴏᴛ ᴅᴇꜰᴀᴜʟᴛ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ.
-• /welcome <on/off> | noformat : enable/disable | ꜱʜᴏᴡꜱ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇ | ꜱᴇᴛᴛɪɴɢꜱ.
-• /goodbye <on/off> | noformat : enable/disable | ꜱʜᴏᴡꜱ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ | ꜱᴇᴛᴛɪɴɢꜱ.
-• /cleanwelcome <on/off> : ꜱʜᴏᴡꜱ ᴏʀ ꜱᴇᴛꜱ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴄʟᴇᴀɴ ᴡᴇʟᴄᴏᴍᴇ ꜱᴇᴛᴛɪɴɢꜱ.
-• /cleangoodbye <on/off> : ꜱʜᴏᴡꜱ ᴏʀ ꜱᴇᴛꜱ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴄʟᴇᴀɴ ɢᴏᴏᴅʙʏᴇ ꜱᴇᴛᴛɪɴɢꜱ.
-
-**ᴄʟᴇᴀɴᴇʀ:**
-• /cleanservice <on/off> : ᴜꜱᴇ ɪᴛ ᴛᴏ ᴄʟᴇᴀɴ ᴀʟʟ ꜱᴇʀᴠɪᴄᴇ ᴍᴇꜱꜱᴀɢᴇꜱ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴏʀ ᴛᴏ ᴠɪᴇᴡ ᴄᴜʀʀᴇɴᴛ ꜱᴛᴀᴛᴜꜱ.
-
-**ғᴏʀᴍᴀᴛ**
-ᴄʜᴇᴄᴋ /markdownhelp ꜰᴏʀ ʜᴇʟᴘ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ꜰᴏʀᴍᴀᴛᴛɪɴɢ!"""
+➤ You can use placeholders inside your messages:  
+• `{first}` – user's first name  
+• `{last}` – user's last name  
+• `{mention}` – clickable user mention  
+• `{id}` – user's Telegram ID  
+• `{chat}` – group name
+"""
