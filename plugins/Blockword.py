@@ -183,3 +183,28 @@ app_instance.add_handler(CommandHandler("blreason", blacklist_reason))
 app_instance.add_handler(CommandHandler("rmallblacklist", confirm_clear_all))
 app_instance.add_handler(CallbackQueryHandler(callback_rm_all, pattern="^rm_allblacklist$"))
 app_instance.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), filter_blacklisted_text))
+
+
+__MODULE__ = "ᴡʙʟᴀᴄᴋʟɪꜱᴛ"
+__HELP__ = """
+**<u>⚠️ ʙʟᴀᴄᴋʟɪꜱᴛ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ</u>**
+
+» `/blacklist` - ꜱʜᴏᴡ ᴀʟʟ ʙʟᴀᴄᴋʟɪꜱᴛᴇᴅ ᴡᴏʀᴅꜱ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
+» `/addblacklist <word1> <word2>` - ᴀᴅᴅ ᴡᴏʀᴅꜱ ᴛᴏ ʙʟᴀᴄᴋʟɪꜱᴛ.
+» `/rmblacklist <word1> <word2>` - ʀᴇᴍᴏᴠᴇ ᴡᴏʀᴅꜱ ꜰʀᴏᴍ ʙʟᴀᴄᴋʟɪꜱᴛ.
+» `/blaction <action>` - ꜱᴇᴛ ᴀᴄᴛɪᴏɴ ᴏɴ ʙʟᴀᴄᴋʟɪꜱᴛᴇᴅ ᴡᴏʀᴅ:
+   → `ban`, `kick`, `mute`, `warn`, `none`
+» `/blreason <reason>` - ꜱᴇᴛ ᴄᴜꜱᴛᴏᴍ ʀᴇᴀꜱᴏɴ ꜰᴏʀ ᴡᴀʀɴɪɴɢ.
+» `/rmallblacklist` - ʀᴇᴍᴏᴠᴇ ᴀʟʟ ʙʟᴀᴄᴋʟɪꜱᴛᴇᴅ ᴡᴏʀᴅꜱ ᴡɪᴛʜ ᴄᴏɴꜰɪʀᴍ ʙᴜᴛᴛᴏɴ (ᴏᴡɴᴇʀ ᴏɴʟʏ).
+
+**<u>💥 Aᴄᴛɪᴏɴs ᴡʜᴇɴ ᴀ ʙʟᴀᴄᴋʟɪꜱᴛᴇᴅ ᴡᴏʀᴅ ɪꜱ ᴜꜱᴇᴅ</u>**
+• `ban` - ᴜꜱᴇʀ ᴡɪʟʟ ʙᴇ ʙᴀɴɴᴇᴅ.
+• `kick` - ᴜꜱᴇʀ ᴡɪʟʟ ʙᴇ ᴋɪᴄᴋᴇᴅ.
+• `mute` - ᴜꜱᴇʀ ᴡɪʟʟ ʙᴇ ᴍᴜᴛᴇᴅ.
+• `warn` - ᴜꜱᴇʀ ᴡɪʟʟ ʙᴇ ᴡᴀʀɴᴇᴅ ᴡɪᴛʜ ʀᴇᴀꜱᴏɴ.
+• `none` - ᴏɴʟʏ ᴅᴇʟᴇᴛᴇꜱ ᴍᴇꜱꜱᴀɢᴇ.
+
+**<u>👑 ʀᴇǫᴜɪʀᴇᴍᴇɴᴛꜱ</u>**
+• ʙᴏᴛ ᴍᴜꜱᴛ ʙᴇ ᴀɴ ᴀᴅᴍɪɴ ᴡɪᴛʜ "ᴄᴀɴ_ᴅᴇʟᴇᴛᴇ", "ᴄᴀɴ_ʀᴇꜱᴛʀɪᴄᴛ" ᴘᴇʀᴍɪꜱꜱɪᴏɴꜱ.
+• ᴏɴʟʏ ᴀᴅᴍɪɴꜱ ᴄᴀɴ ᴀᴅᴅ/ʀᴇᴍᴏᴠᴇ ʙʟᴀᴄᴋʟɪꜱᴛꜱ.
+"""
