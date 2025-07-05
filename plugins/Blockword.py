@@ -1,4 +1,5 @@
 from html import escape
+import re  # <-- Import regex module
 
 from pyrogram import filters
 from pyrogram.enums import ChatMemberStatus as CMS
@@ -160,20 +161,22 @@ async def filter_blacklisted_text(_, m: Message):
     if not words or m.from_user is None:
         return
 
-    for word in words:
-        if word in m.text.lower():
-            await m.delete()
-            user = m.from_user.id
+    text = m.text.lower()
+    # Join all words as regex pattern for word boundary match
+    pattern = r'\b(' + '|'.join(re.escape(word) for word in words) + r')\b'
+    if re.search(pattern, text):
+        await m.delete()
+        user = m.from_user.id
 
-            if action == "ban":
-                await app.kick_chat_member(m.chat.id, user)
-            elif action == "kick":
-                await app.kick_chat_member(m.chat.id, user)
-                await app.unban_chat_member(m.chat.id, user)
-            elif action == "mute":
-                await app.restrict_chat_member(m.chat.id, user, permissions=False)
-            elif action == "warn":
-                reason = db.get_reason()
-                await m.reply_text(f"⚠️ Warning!\nBlacklisted word used.\nReason: {reason}")
+        if action == "ban":
+            await app.kick_chat_member(m.chat.id, user)
+        elif action == "kick":
+            await app.kick_chat_member(m.chat.id, user)
+            await app.unban_chat_member(m.chat.id, user)
+        elif action == "mute":
+            await app.restrict_chat_member(m.chat.id, user, permissions=False)
+        elif action == "warn":
+            reason = db.get_reason()
+            await m.reply_text(f"⚠️ Warning!\nBlacklisted word used.\nReason: {reason}")
 
-            return
+        return
