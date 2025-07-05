@@ -274,28 +274,18 @@ async def callback_handler(client: Client, callback_query: CallbackQuery):
 
 
 __MODULE__ = "ᴀɴᴛɪғʟᴏᴏᴅ"
-__HELP__ = """**Antiflood
+__HELP__ = """
+**<u>ᴀɴᴛɪғʟᴏᴏᴅ ꜱᴇᴛᴛɪɴɢꜱ 🚫</u>**
 
-Admin commands:
-- /flood: Get the current antiflood settings
-- /setflood <number/off/no>: Set the number of consecutive messages to trigger antiflood. Set to '0', 'off', or 'no' to disable.
-- /setfloodtimer <count> <duration>: Set the number of messages and time required for timed antiflood to take action on a user. Set to just 'off' or 'no' to disable.
-- /floodmode <action type>: Choose which action to take on a user who has been flooding. Possible actions: ban/mute/kick/tban/tmute
-- /clearflood <yes/no/on/off>: Whether to delete the messages that triggered the flood.
+» `/flood` - ᴄʜᴇᴄᴋ ᴄᴜʀʀᴇɴᴛ ᴀɴᴛɪғʟᴏᴏᴅ ꜱᴛᴀᴛᴜꜱ.
+» `/setflood <number/off>` - ꜱᴇᴛ ᴍᴀx ᴍꜱɢ ᴀʟʟᴏᴡᴇᴅ ʙᴇꜰᴏʀᴇ ᴛʀɪɢɢᴇʀ.
+» `/setfloodtimer <count> <duration>` - ᴛɪᴍᴇᴅ ᴀɴᴛɪғʟᴏᴏᴅ ꜱᴇᴛᴛɪɴɢ.
+» `/floodmode <ban/mute/kick/tban/tmute>` - ᴀᴄᴛɪᴏɴ ᴏɴ ᴀɴʏ ᴠɪᴏʟᴀᴛᴏʀ.
+» `/clearflood <yes/no/on/off>` - ᴅᴇʟᴇᴛᴇ ꜰʟᴏᴏᴅ ᴍᴇꜱꜱᴀɢᴇꜱ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ.
 
-Examples:
-- Set antiflood to trigger after 7 messages:
--> /setflood 7
-
-- Disable antiflood:
--> /setflood off
-
-- Set timed antiflood to trigger after 10 messages in 30 seconds:
--> /setfloodtimer 10 30s
-
-- Disabled timed antiflood:
--> /setfloodtimer off
-
-- Set the antiflood action to mute:
--> /floodmode mute
-**"""
+**<u>📍ᴇxᴀᴍᴘʟᴇꜱ</u>**
+» `/setflood 7` - ᴀᴄᴛɪᴠᴀᴛᴇ ᴀɴᴛɪғʟᴏᴏᴅ ᴀꜰᴛᴇʀ 7 ᴍꜱɢꜱ.
+» `/setflood off` - ᴅɪꜱᴀʙʟᴇ ᴀɴᴛɪғʟᴏᴏᴅ.
+» `/setfloodtimer 10 30s` - 10 ᴍꜱɢꜱ ɪɴ 30s ᴛʀɪɢɢᴇʀꜱ ᴀᴄᴛɪᴏɴ.
+» `/floodmode mute` - ᴍᴜᴛᴇ ᴛʜᴇ ꜱᴘᴀᴍᴍᴇʀ.
+"""
